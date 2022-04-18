@@ -24,4 +24,15 @@ class Dinglemouse{
   
 }
 
-//new comment
+//https://www.codewars.com/kata/58279e13c983ca4a2a00002a/solutions/solutions
+function greetDevelopers(list) {
+  list.forEach(function(developer) {
+    developer.greeting = `Hi ${developer.firstName}, what do you like the most about ${developer.language}?`;
+  });
+  
+  return list;
+}
+
+const greetDevelopers = list => list.map(
+  dev => ({...dev, greeting: `Hi ${dev.firstName}, what do you like the most about ${dev.language}?`})
+);
