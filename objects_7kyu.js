@@ -36,3 +36,32 @@ function greetDevelopers(list) {
 const greetDevelopers = list => list.map(
   dev => ({...dev, greeting: `Hi ${dev.firstName}, what do you like the most about ${dev.language}?`})
 );
+
+
+
+//https://www.codewars.com/kata/5420fc9bb5b2c7fd57000004/train/javascript
+function highestRank(arr){
+  let arrObj = {};
+//Your Code logic should written here
+  arr.forEach(item=>{
+    
+    if(item in arrObj){
+      arrObj[item] += 1;
+    }else{
+      arrObj[item] = 1;
+    }
+  })
+  let currentMax = 0;
+  let maxKey = 0;
+  Object.entries(arrObj).forEach((item,index)=>{
+    if (item[1] > currentMax){
+      currentMax = item[1];
+      maxKey = item[0];
+    }else if (item[1] === currentMax){
+      if(item[0] > maxKey){
+        maxKey = item[0];
+      }
+    }
+  })
+  return Number(maxKey);
+}
