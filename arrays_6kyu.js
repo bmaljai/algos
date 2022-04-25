@@ -87,3 +87,36 @@ function createPhoneNumber(numbers){
     }
     return numarr.reduce((acc,curr)=>acc+=curr,0);
   }
+//https://www.codewars.com/kata/5266876b8f4bf2da9b000362/train/javascript
+  function likes(names) {
+    if(names.length < 1){
+      return "no one likes this"
+    }
+    if(names.length === 1){
+      return `${names.shift()} likes this`
+    }
+    if(names.length === 2){
+      return `${names.shift()} and ${names.shift()} like this`
+    }
+    if(names.length === 3){
+      return `${names.shift()}, ${names.shift()} and ${names.shift()} like this`
+    }
+    if(names.length > 3){
+      return `${names.shift()}, ${names.shift()} and ${names.length} others like this`
+    }
+  }
+
+  function likes (names) {
+    var templates = [
+      'no one likes this',
+      '{name} likes this',
+      '{name} and {name} like this',
+      '{name}, {name} and {name} like this',
+      '{name}, {name} and {n} others like this'
+    ];
+    var idx = Math.min(names.length, 4);
+    
+    return templates[idx].replace(/{name}|{n}/g, function (val) {
+      return val === '{name}' ? names.shift() : names.length;
+    });
+  }
