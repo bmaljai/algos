@@ -123,3 +123,9 @@ function createPhoneNumber(numbers){
 
 //https://www.codewars.com/kata/54da5a58ea159efa38000836/solutions
   const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
+
+  //
+  function zeroAndOne(s) {
+    //coding and coding..
+    return 0;
+  }
