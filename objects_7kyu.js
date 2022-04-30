@@ -65,3 +65,9 @@ function highestRank(arr){
   })
   return Number(maxKey);
 }
+
+
+//https://www.codewars.com/kata/5d2659626c7aec0022cb8006/train/javascript
+function* baumSweet() {
+  yield 1;
+}
