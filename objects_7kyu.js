@@ -71,3 +71,9 @@ function highestRank(arr){
 function* baumSweet() {
   yield 1;
 }
+
+
+function disemvowel(str) {
+  let vowels = 'aeiou';
+  return str.split('').filter(item=>!(vowels.includes(item.toLowerCase()))).join('');
+}
