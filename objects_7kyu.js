@@ -77,3 +77,14 @@ function disemvowel(str) {
   let vowels = 'aeiou';
   return str.split('').filter(item=>!(vowels.includes(item.toLowerCase()))).join('');
 }
+
+//https://www.codewars.com/kata/520b9d2ad5c005041100000f/train/javascript
+
+
+function pigIt(str){
+  let exclude = '!?';
+  return str.split(' ').map(item=>{
+    if(exclude.includes(item)){return item}
+    return `${item.slice(1)}${item[0]}ay`
+  }).join(' ');
+}
