@@ -36,3 +36,42 @@ function getCount(str) {
             return string.indexOf(x) !== -1;
         });
     }
+
+
+    function XO(str) {
+        let counter = { 'x': 0, "o": 0 };
+        str.split('').forEach(item => {
+            counter[item.toLowerCase()] += 1;
+        })
+        return counter['x'] == counter['o']
+    }
+
+
+
+
+    function getSum(a, b) {
+        //make sure to zero the accumulator to avoid NaN return, because it will otherwise be undefined
+        let accumulator = 0;
+        if (a < b) {
+            for (let i = a; i <= b; i++) {
+                //if accumulator is not set to 0 explicitly, the accumulator will be += undefined which will return NaN
+                accumulator += Number(i);
+            }
+        } else if (a > b) {
+            for (let i = b; i <= a; i++) {
+                accumulator += Number(i);
+            }
+        } else {
+            accumulator = a;
+        }
+        return accumulator;
+    }
+    //https://www.codewars.com/kata/55f2b110f61eb01779000053/train/javascript
+
+    function digital_root(n) {
+        if (n < 10) { return n };
+        for (var i = 0, n = String(n), a = 0; i < n.length; i++) {
+            a += +n[i];
+        }
+        return digital_root(a);
+    }
