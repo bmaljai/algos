@@ -75,3 +75,9 @@ function getCount(str) {
         }
         return digital_root(a);
     }
+
+    function valueOfX(eq) {
+        let [left, right] = eq.split(' = ');
+        if (right.includes('x')) [left, right] = [right, left];
+        return (eval(right) - eval(left.replace('x', 0))) * (left.includes('- x') ? -1 : 1);
+    }
