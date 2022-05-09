@@ -109,3 +109,8 @@ function getCount(str) {
     var moveZeros = function (arr) {
         return arr.filter(function (x) { return x !== 0 }).concat(arr.filter(function (x) { return x === 0; }));
     }
+
+    function solution(nums) {
+        if (!nums) { return [] }
+        return nums.sort((a, b) => a - b)
+    }
