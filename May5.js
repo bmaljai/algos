@@ -81,3 +81,31 @@ function getCount(str) {
         if (right.includes('x')) [left, right] = [right, left];
         return (eval(right) - eval(left.replace('x', 0))) * (left.includes('- x') ? -1 : 1);
     }
+
+
+    function findChildren(dancingBrigade) {
+        let sorted = [];
+        for (let i = 65; i <= 90; i++) {
+            if (dancingBrigade.includes(String.fromCharCode(i))) {
+                sorted.push(String.fromCharCode(i));
+                for (let j = 0; j < dancingBrigade.length; j++) {
+                    if (dancingBrigade[j] === String.fromCharCode(i + 32)) {
+                        sorted.push(dancingBrigade[j]);
+                    }
+                }
+            }
+        }
+        return sorted.join('');
+    }
+
+    function moveZeros(arr) {
+        return arr.sort((a, b) => {
+            if (a === 0 && a === b) { return 0 }
+            if (a === 0) { return 1 }
+            if (b === 0) { return -1 }
+        })
+    }
+
+    var moveZeros = function (arr) {
+        return arr.filter(function (x) { return x !== 0 }).concat(arr.filter(function (x) { return x === 0; }));
+    }
