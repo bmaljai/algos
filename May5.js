@@ -114,3 +114,7 @@ function getCount(str) {
         if (!nums) { return [] }
         return nums.sort((a, b) => a - b)
     }
+
+    function filter_list(l) {
+        return l.filter(item=>typeof item === 'number');
+     }
