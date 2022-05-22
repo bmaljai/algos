@@ -19,3 +19,20 @@ function openOrSenior(data) {
   })
   return newarr;
 }
+function duplicateEncode(word){
+  word = word.toLowerCase();
+  let obj = {};
+  for(let i =0;i<word.length;i++){
+    if(word[i] in obj){
+       obj["" + word[i]]=")";
+    }else{
+      obj[String(word[i])]="(";
+    }
+  }
+  let newstr = "";
+  for(let j=0;j<word.length;j++){
+    newstr += obj[word[j]]
+  }
+return newstr;
+  
+}
