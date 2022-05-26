@@ -36,3 +36,15 @@ function duplicateEncode(word){
 return newstr;
   
 }
+
+console.log('a'.charCodeAt());
+console.log(String.fromCharCode(65));
+function cypherShift(number){
+  return (number+13)%26
+}
+console.log(cypherShift(20));
+let oldchar = 'y';
+let newchar = oldchar.charCodeAt();
+console.log(newchar-96)
+
+//65 and 96
