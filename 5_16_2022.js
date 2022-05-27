@@ -55,3 +55,22 @@ function highAndLow(numbers){
   let arr = numbers.split(" ").map(item => +item);
   return `${Math.max(...arr)} ${Math.min(...arr)}`
 }
+
+
+
+function order(words){
+  let wordsArr = words.split(' ');
+  let wordsArrLength = wordsArr.length;
+  let orderedArr = new Array();
+  
+  for(let i=0;i<wordsArrLength;i++){
+    for(let j=0;j<wordsArr[i].length;j++){
+
+      if(typeof Number(wordsArr[i][j]) === 'number'){
+        orderedArr[wordsArr[i][j]-1] = wordsArr[i];
+      }
+    }
+  }
+   
+  return orderedArr.join(' ');
+}
