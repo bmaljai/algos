@@ -48,3 +48,10 @@ let newchar = oldchar.charCodeAt();
 console.log(newchar-96)
 
 //65 and 96
+
+
+
+function highAndLow(numbers){
+  let arr = numbers.split(" ").map(item => +item);
+  return `${Math.max(...arr)} ${Math.min(...arr)}`
+}
