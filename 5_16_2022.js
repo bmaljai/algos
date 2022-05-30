@@ -74,3 +74,17 @@ function order(words){
    
   return orderedArr.join(' ');
 }
+
+
+var uniqueInOrder=function(iterable){
+  //your code here - remember iterable can be a string or an array
+  let previous;
+  let newarr=[];
+  for(let i=0;i<iterable.length;i++){
+    if(previous !== iterable[i]){
+      newarr.push(iterable[i])      
+    }
+    previous = iterable[i]
+  }
+  return newarr;
+}
