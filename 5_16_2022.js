@@ -88,3 +88,20 @@ var uniqueInOrder=function(iterable){
   }
   return newarr;
 }
+
+//https://www.codewars.com/kata/555eded1ad94b00403000071/train/javascript
+function SeriesSum(n)
+{
+  let top = 1;
+  let sum = 0;
+  
+  for(let i=1;i<=n;i++){
+    let acc = (i-1)*3;
+    let bottom = 1 + acc;
+    let total = top/bottom;
+    
+    sum+=total;
+  }
+  
+  return sum.toFixed(2)
+}
