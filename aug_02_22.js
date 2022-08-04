@@ -48,3 +48,9 @@ function isValidWalk(walk) {
     return walk.length == 10 && count('n') == count('s') && count('w') == count('e');
 }
 
+//https://www.codewars.com/kata/55b42574ff091733d900002f/train/javascript
+function friend(friends) {
+    //your code here
+    let result = friends.filter(name => name.length === 4)
+    return result
+}
