@@ -54,3 +54,29 @@ function friend(friends) {
     let result = friends.filter(name => name.length === 4)
     return result
 }
+
+//growth over year
+//https://www.codewars.com/kata/563b662a59afc2b5120000c6/train/javascript
+function nbYear(p0, percent, aug, p) {
+    if (p < p0) { return 0 };
+
+    let percentFormat = percent * 0.01;
+    let currentpop = p0 + (percentFormat * p0) + aug;
+    let n = 1;
+    if (currentpop > p) { return n };
+
+    while (currentpop < p) {
+        currentpop = currentpop + (percentFormat * currentpop) + aug;
+        n = n + 1;
+
+    }
+    return n;
+}
+
+function nbYear(p0, percent, aug, p) {
+
+    for (var years = 0; p0 < p; years++) {
+        p0 = Math.floor(p0 + p0 * percent / 100 + aug);
+    }
+    return years
+}
