@@ -19,3 +19,16 @@ function isIsogram(str) {
 
     return true
 }
+
+function getMiddle(s) {
+    let count = s.length;
+    let index = count / 2;
+    let flag = count % 2;
+    let slice;
+    if (flag) {
+        slice = s.slice(index, index + 1)
+    } else {
+        slice = s.slice(index - 1, index + 1)
+    }
+    return slice
+}
