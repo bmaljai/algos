@@ -32,3 +32,22 @@ function getMiddle(s) {
     }
     return slice
 }
+
+function getMiddle(s) {
+    return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
+}
+
+
+function accum(s) {
+    // your code
+    let newstringarray = []
+    s.split('').forEach((item, index) => {
+        let insertstring = ''
+        insertstring += item.toUpperCase()
+        for (let i = 0; i < index; i++) {
+            insertstring += item.toLowerCase()
+        }
+        newstringarray.push(insertstring)
+    })
+    return newstringarray.join('-')
+}
