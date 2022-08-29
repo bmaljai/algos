@@ -51,3 +51,18 @@ function accum(s) {
     })
     return newstringarray.join('-')
 }
+
+function DNAStrand(dna) {
+    //your code here
+    let legend = {
+        "A": "T",
+        "T": "A",
+        "G": "C",
+        "C": "G"
+    }
+    let str = ''
+    dna.split('').forEach(item => {
+        str += legend[item]
+    })
+    return str
+}
