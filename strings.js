@@ -71,3 +71,14 @@ function doubleChar(str) {
     // Your code here
     return str.split('').map(item => item + item).join('')
 }
+
+function spinWords(string) {
+    //TODO Have fun :)
+    return string.split(' ').map(item => {
+        if (item.length >= 5) {
+            return item.split('').reverse().join('')
+        } else {
+            return item
+        }
+    }).join(' ')
+}
