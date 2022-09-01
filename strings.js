@@ -82,3 +82,12 @@ function spinWords(string) {
         }
     }).join(' ')
 }
+
+var countBits = function (n) {
+    // Program Me
+    console.log(n)
+    if (n === 0) { return n }
+    return n.toString(2).split('').filter(x => { return x != 0 }).length
+};
+
+countBits = n => n.toString(2).split('0').join('').length;
