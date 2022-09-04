@@ -104,3 +104,24 @@ function toCamelCase(str) {
     }
     return arr.join('');
 }
+
+function solution(str) {
+    if (str === '') { return [] }
+    let arr = str.split('')
+    let newstr = ''
+    if (arr.length % 2 > 0) {
+        arr.push('_')
+    }
+    let pair = []
+    for (let i = 0; i < arr.length; i++) {
+        pair.push(arr[i])
+        if (i % 2 > 0) {
+            newstr += pair.shift()
+            newstr += pair.shift()
+            if (i < arr.length - 1) {
+                newstr += ','
+            }
+        }
+    }
+    return newstr.split(',')
+}
