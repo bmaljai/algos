@@ -138,3 +138,24 @@ function solution(str) {
     }
     return result;
 }
+
+function solution(string) {
+    string = string.split('').map(function (el) {
+        if (el === el.toUpperCase()) {
+            el = ' ' + el
+        }
+        return el
+    })
+    return string.join('')
+}
+
+// complete the function
+function solution(string) {
+    let arr = string.split('')
+    arr.forEach((item, index) => {
+        if (item === item.toUpperCase()) {
+            arr[index] = ' ' + item
+        }
+    })
+    return arr.join('')
+}
