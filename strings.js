@@ -159,3 +159,4 @@ function solution(string) {
     })
     return arr.join('')
 }
+

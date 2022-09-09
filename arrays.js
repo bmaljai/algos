@@ -15,3 +15,19 @@ function getAverage(marks) {
         acc + current, 0) / marks.length)
 
 }
+
+const items = [
+    { price: 100},
+    { price: 200},
+    { price: 300},
+    { price: 400},
+    { price: 500},
+    { price: 600}
+]
+items.filter((item)=>{
+    return item.price<=100
+})
+
+function mergeArrays(arr1, arr2) {
+    return Array.from(new Set(arr1.concat(arr2).sort((a, b) => (a - b))));
+}
