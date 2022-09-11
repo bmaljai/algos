@@ -36,3 +36,11 @@ function printArray(array) {
     //show me the code!
     return array.join(',')
 }
+websites.push('codewars')// add the value "codewars" to the already defined websites array
+
+function arrayMadness(a, b) {
+    // Ready, get set, GO!!!
+    let suma = a.reduce((a, b) => a + b ** 2, 0)
+    let sumb = b.reduce((a, b) => a + b ** 3, 0)
+    return suma > sumb
+}
