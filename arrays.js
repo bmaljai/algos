@@ -44,3 +44,7 @@ function arrayMadness(a, b) {
     let sumb = b.reduce((a, b) => a + b ** 3, 0)
     return suma > sumb
 }
+
+function sumOfDifferences(arr) {
+    return arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0;
+}
