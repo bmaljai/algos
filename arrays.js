@@ -48,3 +48,7 @@ function arrayMadness(a, b) {
 function sumOfDifferences(arr) {
     return arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0;
 }
+
+function oddOrEven(arr) {
+    return arr.reduce((a, b) => a + b, 0) % 2 ? 'odd' : 'even';
+}
