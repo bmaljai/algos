@@ -52,3 +52,11 @@ function sumOfDifferences(arr) {
 function oddOrEven(arr) {
     return arr.reduce((a, b) => a + b, 0) % 2 ? 'odd' : 'even';
 }
+function oddOrEven(array) {
+    let remainder = array.reduce((accumulator, current) => accumulator + current, 0) % 2
+    return remainder ? 'odd' : 'even'
+}
+
+var isSquare = function (n) {
+    return n ** (1 / 2) === Math.floor(n ** (1 / 2))
+}
