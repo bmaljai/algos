@@ -60,3 +60,11 @@ function oddOrEven(array) {
 var isSquare = function (n) {
     return n ** (1 / 2) === Math.floor(n ** (1 / 2))
 }
+
+function reverseList(list) {
+    return list.reverse()
+}
+// return the two oldest/oldest ages within the array of ages passed in.
+function twoOldestAges(ages) {
+    return ages.sort(function (a, b) { return a - b; }).slice(-2);
+}
