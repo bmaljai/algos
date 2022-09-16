@@ -68,3 +68,18 @@ function reverseList(list) {
 function twoOldestAges(ages) {
     return ages.sort(function (a, b) { return a - b; }).slice(-2);
 }
+
+function findShort(s) {
+    let min = s.split(' ')[0].length
+    let indexmin = 0
+    s.split(' ').forEach((item, index, array) => {
+
+        if (item.length < min) {
+            min = item.length
+            indexmin = index
+        }
+    })
+    return min
+}
+
+site: dice.com | site: indeed.com | site: angel.co | site: lever.co | site: greenhouse.io | site: jobs.ashbyhq.com | site: app.dover.io(engineer | developer)("javascript" AND "remote") - senior - staff - sr. - lead - principal - angular after: 2022 - 08 - 01
