@@ -82,4 +82,8 @@ function findShort(s) {
     return min
 }
 
+function duplicateCount(text) {
+    return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
+}
+
 site: dice.com | site: indeed.com | site: angel.co | site: lever.co | site: greenhouse.io | site: jobs.ashbyhq.com | site: app.dover.io(engineer | developer)("javascript" AND "remote") - senior - staff - sr. - lead - principal - angular after: 2022 - 08 - 01
